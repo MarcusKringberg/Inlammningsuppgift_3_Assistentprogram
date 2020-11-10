@@ -1,0 +1,36 @@
+/**Detta ar en metod med namnet tydlighet. Den returnerar en sträng som berettar hur lamplig assistenten ar baserat pa dess tydlighet.
+     * @param tydlighetsfraga
+     * @return lamplighet med tanke pa tydlighet
+     */
+
+     /**
+          * Detta ar en metod som lagrar assistentens onskemal pa anstallningslagnd och sparar det i en variabel i main metoden for att sedan kunna jamfora detta med brukarens onskemal pa anstallningslagnd.
+          * @param anstallningslagnd
+          * @returnlamplighet_med_tanke_pa_anstallningslagnd
+          */
+          /** Detta ar en metod som returnerar en strang som berettar hur lamplig assistenten är för jobbet basserat pa dess muskelstyrka.
+               * @param muskelstyrka
+               * @return Lamplighet_Med_Tanke_Pa_Muskelstyrka
+               */
+/**Detta ar en metod som returnerar en strang som  berettar villket behov av muskelstyrka brukaren har.
+     *
+     * @param Behov_Av_Muskelstyrka
+     * @return Assistentens styrkebehov
+     */
+     /**
+          *Detta ar en metod som returnerar en strang som bekraftar vad brukaren behover i form av tydlighet hos assistenten.
+          * @param Behov_Av_Tydlighet
+          * @return Behov_Av_Tydlighet_Hos_Assistenten
+          */
+          /**
+              /**Detta ar en metod som returnerar en strang som berattar om assistenten ar lamplig att anstallas med tanke pa dennes sjukfranvaro.
+               * @param Sjukfranvaro_Per_Ar
+               * @return Lamplighet_Med_Tanke_Pa_Sjukfranvaro
+               */
+               /**
+                    * Detta ar en metod som returnerar assistentens onskemal om lagnd pa anstallning. Detta lagras i en String_variabel i metoden Main.
+                    * @param Onskemal_Om_Lagnd_Pa_Anstallning
+                    * @return Onskemal_Om_Lagnd_Pa_Anstallning
+                    */
+
+
