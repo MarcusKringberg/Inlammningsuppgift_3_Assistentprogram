@@ -29,11 +29,13 @@ public class Assistent {
      * @return Alder_pa_assistent
      */
     public int Alder(int Alder_Pa_Assistent) {
+
         return Alder_Pa_Assistent;
     }
 
     /**
-    /**Detta ar en metod som returnerar en strang som berattar om assistenten ar lamplig att anstallas med tanke pa dennes sjukfranvaro.
+     * /**Detta ar en metod som returnerar en strang som berattar om assistenten ar lamplig att anstallas med tanke pa dennes sjukfranvaro.
+     *
      * @param Sjukfranvaro_Per_Ar
      * @return Lamplighet_Med_Tanke_Pa_Sjukfranvaro
      */
@@ -50,6 +52,7 @@ public class Assistent {
 
     /**
      * Detta ar en metod som lagrar assistentens onskemal pa anstallningslagnd och sparar det i en variabel i main metoden for att sedan kunna jamfora detta med brukarens onskemal pa anstallningslagnd.
+     *
      * @param anstallningslagnd
      * @returnlamplighet_med_tanke_pa_anstallningslagnd
      */
@@ -62,35 +65,39 @@ public class Assistent {
         return lamplighet_med_tanke_pa_anstallningslagnd;
     }
 
-    /**Detta ar en metod med namnet tydlighet. Den returnerar en sträng som berettar hur lamplig assistenten ar baserat pa dess tydlighet.
+    /**
+     * Detta ar en metod med namnet tydlighet. Den returnerar en sträng som berettar hur lamplig assistenten ar baserat pa dess tydlighet.
+     *
      * @param tydlighetsfraga
      * @return lamplighet med tanke pa tydlighet
      */
     public String Tydlighet(String tydlighetsfraga) {
         String Lamplighet_Med_Tanke_Pa_Tydlighet = " ";
         if (tydlighetsfraga.equals("Mycket tydlig"))
-            Lamplighet_Med_Tanke_Pa_Tydlighet = "Du passar valdigt bra for anstallningen";
+            Lamplighet_Med_Tanke_Pa_Tydlighet = "Du passar valdigt bra for anstallningen.";
         else if (tydlighetsfraga.equals("Lite tydlig"))
-            Lamplighet_Med_Tanke_Pa_Tydlighet = "Du kan få det har jobbet om du gar mycket utbildning i tydlighet";
+            Lamplighet_Med_Tanke_Pa_Tydlighet = "Du kan få det har jobbet om du gar mycket utbildning i tydlighet.";
         else if (tydlighetsfraga.equals("Inte alls tydlig"))
             Lamplighet_Med_Tanke_Pa_Tydlighet = "Du ar inte lampad for jobbet med tanke pa att brukaren kraver mycket tydlighet";
         else
-            Lamplighet_Med_Tanke_Pa_Tydlighet = "Felaktig data inmatat";
+            Lamplighet_Med_Tanke_Pa_Tydlighet = "Felaktig data inmatat.";
         return Lamplighet_Med_Tanke_Pa_Tydlighet;
     }
 
-    /** Detta ar en metod som returnerar en strang som berettar hur lamplig assistenten är för jobbet basserat pa dess muskelstyrka.
+    /**
+     * Detta ar en metod som returnerar en strang som berettar hur lamplig assistenten är för jobbet basserat pa dess muskelstyrka.
+     *
      * @param muskelstyrka
      * @return Lamplighet_Med_Tanke_Pa_Muskelstyrka
      */
     public String Assistentens_Behov_Av_Muskelstyrka(String muskelstyrka) {
         String Lamplighet_Med_Tanke_Pa_Muskelstyrka = " ";
         if (muskelstyrka.equals("Lite stark")) {
-            Lamplighet_Med_Tanke_Pa_Muskelstyrka = "Det ar inte sa bra for detta jobb. I detta jobb kan brukare behova lyftas och det ar valdigt tungt. Vi far se om vi kan hitta en brukare som inte behover sa tunga lyft";
+            Lamplighet_Med_Tanke_Pa_Muskelstyrka = "Det ar inte sa bra for detta jobb. I detta jobb kan brukare behova lyftas och det ar valdigt tungt. Vi far se om vi kan hitta en brukare som inte behover sa tunga lyft.";
         } else if (muskelstyrka.equals("Mycket stark")) {
-            Lamplighet_Med_Tanke_Pa_Muskelstyrka = "Det ar väldigt bra att du ar stark i detta jobb da en del funktionshindrade behover hjalp med att lyftas";
-        }else
-            Lamplighet_Med_Tanke_Pa_Muskelstyrka = "Felaktig data inmatat";
+            Lamplighet_Med_Tanke_Pa_Muskelstyrka = "Det ar väldigt bra att du ar stark i detta jobb da en del funktionshindrade behover hjalp med att lyftas.";
+        } else
+            Lamplighet_Med_Tanke_Pa_Muskelstyrka = "Felaktig data inmatat.";
         return Lamplighet_Med_Tanke_Pa_Muskelstyrka;
 
 
