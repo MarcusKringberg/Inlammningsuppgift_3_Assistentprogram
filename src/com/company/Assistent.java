@@ -43,9 +43,9 @@ public class Assistent {
     public String Fa_Ut_Uppskattad_Sjukfranvaro_Per_Ar(int Sjukfranvaro_Per_Ar) {
         String Lamplighet_Med_Tanke_Pa_Sjukfranvaro;
         if (Sjukfranvaro_Per_Ar <= 2)
-            Lamplighet_Med_Tanke_Pa_Sjukfranvaro = "Din sjukfranvaro ar tillrackligt lag for det har jobbet";
+            Lamplighet_Med_Tanke_Pa_Sjukfranvaro = "Din sjukfranvaro ar tillrackligt lag for det har jobbet.";
         else
-            Lamplighet_Med_Tanke_Pa_Sjukfranvaro = "Du ar sjuk for ofta for att anstallas pa detta jobb";
+            Lamplighet_Med_Tanke_Pa_Sjukfranvaro = "Du ar sjuk for ofta for att anstallas pa detta jobb.";
         return Lamplighet_Med_Tanke_Pa_Sjukfranvaro;
 
     }
@@ -59,9 +59,9 @@ public class Assistent {
     public String Anstallningens_Uppskattade_Lagnd(double anstallningslagnd) {
         String lamplighet_med_tanke_pa_anstallningslagnd;
         if (anstallningslagnd >= 2)
-            lamplighet_med_tanke_pa_anstallningslagnd = "Prognos pa anstallningslangden stammer med var vi förvantar oss";
+            lamplighet_med_tanke_pa_anstallningslagnd = "Prognos pa anstallningslangden stammer med var vi förvantar oss.";
         else
-            lamplighet_med_tanke_pa_anstallningslagnd = "Vi har onskemal om minst 1 ars arbete pa personer som ska jobba har";
+            lamplighet_med_tanke_pa_anstallningslagnd = "Vi har onskemal om minst 1 ars arbete pa personer som ska jobba har.";
         return lamplighet_med_tanke_pa_anstallningslagnd;
     }
 
@@ -78,7 +78,7 @@ public class Assistent {
         else if (tydlighetsfraga.equals("Lite tydlig"))
             Lamplighet_Med_Tanke_Pa_Tydlighet = "Du kan få det har jobbet om du gar mycket utbildning i tydlighet.";
         else if (tydlighetsfraga.equals("Inte alls tydlig"))
-            Lamplighet_Med_Tanke_Pa_Tydlighet = "Du ar inte lampad for jobbet med tanke pa att brukaren kraver mycket tydlighet";
+            Lamplighet_Med_Tanke_Pa_Tydlighet = "Du ar inte lampad for jobbet med tanke pa att brukaren kraver mycket tydlighet.";
         else
             Lamplighet_Med_Tanke_Pa_Tydlighet = "Felaktig data inmatat.";
         return Lamplighet_Med_Tanke_Pa_Tydlighet;

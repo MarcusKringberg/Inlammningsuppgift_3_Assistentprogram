@@ -17,17 +17,17 @@ public class Assistentfragor_Och_Brukarfragor {
             assistent.fornamn = Intervju_assistenter.substring(0, Intervju_assistenter.indexOf(' '));
             assistent.efternamn = Intervju_assistenter.substring(Intervju_assistenter.indexOf(' '));
 
-            String Namn_Pa_Assistent = "Kul att veta vad du heter. Valkommen " + assistent.Namnfraga(assistent.fornamn, assistent.efternamn);
+            String Namn_Pa_Assistent = "Kul att veta vad du heter. Valkommen " + assistent.Namnfraga(assistent.fornamn, assistent.efternamn + ".");
             JOptionPane.showMessageDialog(null, Namn_Pa_Assistent);
             Intervju_assistenter = JOptionPane.showInputDialog("Hur gammal ar du?");
             assistent.Alder_Pa_Assistent = Integer.parseInt(Intervju_assistenter);
-            String Assistentens_alder = "Da vet vi hur gammal du ar. Kul att veta att du ar " + assistent.Alder(assistent.Alder_Pa_Assistent) + "ar";
+            String Assistentens_alder = "Da vet vi hur gammal du ar. Kul att veta att du ar " + assistent.Alder(assistent.Alder_Pa_Assistent) + " ar.";
             JOptionPane.showMessageDialog(null, Assistentens_alder);
 
 
             Intervju_assistenter = JOptionPane.showInputDialog("Hur lange avser du att jobba har? Svara i ar.  ");
             assistent.Lagnd_Pa_anstallning = Double.parseDouble(Intervju_assistenter);
-            JOptionPane.showMessageDialog(null, "Onskemalet pa din anstallningslagnd har lagrats och kommer sedan att jamforas med brukarens onskemal pa anstallningslagnd");
+            JOptionPane.showMessageDialog(null, "Onskemalet pa din anstallningslagnd har lagrats och kommer sedan att jamforas med brukarens onskemal pa anstallningslagnd.");
 
 
             Intervju_assistenter = JOptionPane.showInputDialog("Hur ofta ar du sjuk per ar? Vanligen svara med antalet ganger per ar som du ar sjuk.  ");
@@ -56,7 +56,7 @@ public class Assistentfragor_Och_Brukarfragor {
             Fragor_Till_Brukare = JOptionPane.showInputDialog("Vad heter du?");
             brukare.fornamn = Fragor_Till_Brukare.substring(0, Fragor_Till_Brukare.indexOf(' '));
             brukare.efternamn = Fragor_Till_Brukare.substring(Fragor_Till_Brukare.indexOf(' '));
-            String Namn_Pa_Brukare = "Vad bra, da vet vi vad du heter. Valkommen till oss " + brukare.Namn_Pa_Brukare(brukare.fornamn, brukare.efternamn);
+            String Namn_Pa_Brukare = "Vad bra, da vet vi vad du heter. Valkommen till oss " + brukare.Namn_Pa_Brukare(brukare.fornamn, brukare.efternamn + ".");
             JOptionPane.showMessageDialog(null, Namn_Pa_Brukare);
 
             Fragor_Till_Brukare = JOptionPane.showInputDialog("Hur stort tydlighetsbehov har du? Valj mellan alternativen 'Jag behover mycket tydlighet i vardagen' eller 'Jag behover lite tydlighet i vardagen'.");
@@ -74,9 +74,9 @@ public class Assistentfragor_Och_Brukarfragor {
             if (brukare.Onskemal_Om_Lagnd_Pa_anstallning <= assistent.Lagnd_Pa_anstallning) {
                 JOptionPane.showMessageDialog(null, " En anstallning mellan er tva verkar passa bra ihop.");
             } else {
-                JOptionPane.showMessageDialog(null, "En anstallning mellan er verkar inte ga att fa till med tanke pa att ni har olika onskemal pa anstallningslagnden");
+                JOptionPane.showMessageDialog(null, "En anstallning mellan er verkar inte ga att fa till med tanke pa att ni har olika onskemal pa anstallningslagnden.");
             }
-            String Motesfraga = JOptionPane.showInputDialog("Nu har vi gatt igenom alla punkter pa denna intrervju. Vill " + assistent.fornamn + "" + assistent.efternamn + " traffa " + "" + brukare.fornamn + "" + brukare.efternamn + " for en verklig intervju? Vanligen svara med 'Ja' eller 'Nej'");
+            String Motesfraga = JOptionPane.showInputDialog("Nu har vi gatt igenom alla punkter pa denna intrervju. Vill " + assistent.fornamn + "" + assistent.efternamn + " traffa " + "" + brukare.fornamn + "" + brukare.efternamn + " for en verklig intervju? Vanligen svara med 'Ja' eller 'Nej'.");
             if (Motesfraga.equals("Ja")) {
                 String Telefonummer_Till_Assistent = JOptionPane.showInputDialog("Villket ar telefonummret till " + assistent.fornamn + "" + assistent.efternamn + "?");
                 String Telefonummer_Till_Brukare = JOptionPane.showInputDialog("Villket ar telefonummret till " + brukare.fornamn + "" + brukare.efternamn + "?");

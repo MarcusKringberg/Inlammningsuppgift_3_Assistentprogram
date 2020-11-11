@@ -64,9 +64,9 @@ public class Brukare {
      */
     public String Behov_Av_Bra_Pedagogik(String Behov_Av_Tydlighet) {
         String Behov_Av_Tydlighet_Hos_Assistenten = "";
-        if (Behov_Av_Tydlighet.equals("Jag behover mycket tydlighet i vardagen."))
-            Behov_Av_Tydlighet_Hos_Assistenten = "Da ska vi leta efter en assistent med mycket pedagogiska kunskaper till dig";
-        else if (Behov_Av_Tydlighet.equals("Jag behover lite tydlighet i vardagen."))
+        if (Behov_Av_Tydlighet.equals("Jag behover mycket tydlighet i vardagen"))
+            Behov_Av_Tydlighet_Hos_Assistenten = "Da ska vi leta efter en assistent med mycket pedagogiska kunskaper till dig.";
+        else if (Behov_Av_Tydlighet.equals("Jag behover lite tydlighet i vardagen"))
             Behov_Av_Tydlighet_Hos_Assistenten = " Da vet vi att din assistent inte behover sa mycket pedagogik.";
         else
             Behov_Av_Tydlighet_Hos_Assistenten = "Felaktig data inmatat.";
