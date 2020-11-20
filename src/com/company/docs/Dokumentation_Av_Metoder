@@ -27,10 +27,6 @@
                * @param Sjukfranvaro_Per_Ar
                * @return Lamplighet_Med_Tanke_Pa_Sjukfranvaro
                */
-               /**
-                    * Detta ar en metod som returnerar assistentens onskemal om lagnd pa anstallning. Detta lagras i en String_variabel i metoden Main.
-                    * @param Onskemal_Om_Lagnd_Pa_Anstallning
-                    * @return Onskemal_Om_Lagnd_Pa_Anstallning
-                    */
+
 
 

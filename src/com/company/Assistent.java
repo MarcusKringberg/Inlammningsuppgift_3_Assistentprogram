@@ -1,24 +1,27 @@
 package com.company;
 
+import javax.swing.*;
+
 public class Assistent {
-    int Alder_Pa_Assistent;
-    double Lagnd_Pa_anstallning;
-    int Uppskattad_Sjukfranvaro_Per_Ar;
-    String fornamn;
-    String efternamn;
-    String Hur_Bra_Ar_Du_Pa_Pedagogik;
-    String muskelstyrka;
-    String Tydlighet;
+    private int  Alder_Pa_Assistent;
+    private double Lagnd_Pa_anstallning;
+    private int  Uppskattad_Sjukfranvaro_Per_Ar;
+    private String namn;
+    private String Hur_Bra_Ar_Du_Pa_Pedagogik;
+    private String muskelstyrka;
+    private String Tydlighet;
 
     /**
      * En metod som returnerar assistentens namn.
      *
-     * @param fornamn
-     * @param efternamn
-     * @return fornamn + efternamn
+     * @param namn
      */
-    public String Namnfraga(String fornamn, String efternamn) {
-        return fornamn + "" + efternamn;
+    public void sattnamn(String namn) {
+        if (namn.length()< 2 && namn == null)
+            throw new IllegalArgumentException("Felaktigt namn");
+        else
+            this.namn = namn;
+        JOptionPane.showMessageDialog(null,"Kul att veta vad du heter. Valkommen " +  namn);
 
     }
 
@@ -28,8 +31,16 @@ public class Assistent {
      * @param Alder_Pa_Assistent
      * @return Alder_pa_assistent
      */
-    public int Alder(int Alder_Pa_Assistent) {
+    public void sattAlder(int Alder_Pa_Assistent) {
 
+        if(Alder_Pa_Assistent < 0)
+            throw new IllegalArgumentException("En alder kan inte vara negativ");
+        else
+            this.Alder_Pa_Assistent = Alder_Pa_Assistent;
+        JOptionPane.showMessageDialog(null,"Da vet vi hur gammal du ar. Kul att veta att du ar " + Alder_Pa_Assistent + "ar." );
+    }
+
+    public int getAlder_Pa_Assistent() {
         return Alder_Pa_Assistent;
     }
 
@@ -40,13 +51,17 @@ public class Assistent {
      * @return Lamplighet_Med_Tanke_Pa_Sjukfranvaro
      */
 
-    public String Fa_Ut_Uppskattad_Sjukfranvaro_Per_Ar(int Sjukfranvaro_Per_Ar) {
+    public void setUppskattad_Sjukfranvaro_Per_Ar(int Sjukfranvaro_Per_Ar) {
         String Lamplighet_Med_Tanke_Pa_Sjukfranvaro;
-        if (Sjukfranvaro_Per_Ar <= 2)
+        if (Sjukfranvaro_Per_Ar < 0)
+            throw  new IllegalArgumentException("En sjukfranvaro kan inte vara negativ");
+
+        else if (Sjukfranvaro_Per_Ar <= 2){
             Lamplighet_Med_Tanke_Pa_Sjukfranvaro = "Din sjukfranvaro ar tillrackligt lag for det har jobbet.";
-        else
+            JOptionPane.showMessageDialog(null,Lamplighet_Med_Tanke_Pa_Sjukfranvaro);}
+        else{
             Lamplighet_Med_Tanke_Pa_Sjukfranvaro = "Du ar sjuk for ofta for att anstallas pa detta jobb.";
-        return Lamplighet_Med_Tanke_Pa_Sjukfranvaro;
+            JOptionPane.showMessageDialog(null,Lamplighet_Med_Tanke_Pa_Sjukfranvaro);}
 
     }
 
@@ -58,10 +73,13 @@ public class Assistent {
      */
     public String Anstallningens_Uppskattade_Lagnd(double anstallningslagnd) {
         String lamplighet_med_tanke_pa_anstallningslagnd;
-        if (anstallningslagnd >= 2)
+        if (anstallningslagnd < 0)
+            throw  new IllegalArgumentException("Felaktig data inmatat. En anstallningslagnd kan inte vara negativ.");
+        if (anstallningslagnd >= 1)
             lamplighet_med_tanke_pa_anstallningslagnd = "Prognos pa anstallningslangden stammer med var vi förvantar oss.";
         else
             lamplighet_med_tanke_pa_anstallningslagnd = "Vi har onskemal om minst 1 ars arbete pa personer som ska jobba har.";
+        JOptionPane.showMessageDialog(null,lamplighet_med_tanke_pa_anstallningslagnd);
         return lamplighet_med_tanke_pa_anstallningslagnd;
     }
 
@@ -71,7 +89,7 @@ public class Assistent {
      * @param tydlighetsfraga
      * @return lamplighet med tanke pa tydlighet
      */
-    public String Tydlighet(String tydlighetsfraga) {
+    public void  SetTydlighet(String tydlighetsfraga) {
         String Lamplighet_Med_Tanke_Pa_Tydlighet = " ";
         if (tydlighetsfraga.equals("Mycket tydlig"))
             Lamplighet_Med_Tanke_Pa_Tydlighet = "Du passar valdigt bra for anstallningen.";
@@ -80,8 +98,10 @@ public class Assistent {
         else if (tydlighetsfraga.equals("Inte alls tydlig"))
             Lamplighet_Med_Tanke_Pa_Tydlighet = "Du ar inte lampad for jobbet med tanke pa att brukaren kraver mycket tydlighet.";
         else
-            Lamplighet_Med_Tanke_Pa_Tydlighet = "Felaktig data inmatat.";
-        return Lamplighet_Med_Tanke_Pa_Tydlighet;
+            throw new IllegalArgumentException("Felaktig data inmatat");
+        JOptionPane.showMessageDialog(null,Lamplighet_Med_Tanke_Pa_Tydlighet);
+
+
     }
 
     /**
@@ -90,19 +110,23 @@ public class Assistent {
      * @param muskelstyrka
      * @return Lamplighet_Med_Tanke_Pa_Muskelstyrka
      */
-    public String Assistentens_Behov_Av_Muskelstyrka(String muskelstyrka) {
+    public void Set_Assistentens_Behov_Av_Muskelstyrka(String muskelstyrka) {
         String Lamplighet_Med_Tanke_Pa_Muskelstyrka = " ";
         if (muskelstyrka.equals("Lite stark")) {
             Lamplighet_Med_Tanke_Pa_Muskelstyrka = "Det ar inte sa bra for detta jobb. I detta jobb kan brukare behova lyftas och det ar valdigt tungt. Vi far se om vi kan hitta en brukare som inte behover sa tunga lyft.";
         } else if (muskelstyrka.equals("Mycket stark")) {
             Lamplighet_Med_Tanke_Pa_Muskelstyrka = "Det ar väldigt bra att du ar stark i detta jobb da en del funktionshindrade behover hjalp med att lyftas.";
         } else
-            Lamplighet_Med_Tanke_Pa_Muskelstyrka = "Felaktig data inmatat.";
-        return Lamplighet_Med_Tanke_Pa_Muskelstyrka;
+            throw new IllegalArgumentException("Felaktig data inmatat");
+        JOptionPane.showMessageDialog(null,Lamplighet_Med_Tanke_Pa_Muskelstyrka);
+
 
 
     }
 }
+
+
+
 
 
 
